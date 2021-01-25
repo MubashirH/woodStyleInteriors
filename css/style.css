@@ -47,7 +47,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
   }
 }
 #loginModal .btn {
-  background-color: #ffa704;
+  background-color: #0097da;
   color: white;
 }
 #loginModal .btn:hover {
@@ -102,7 +102,11 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 .menu_wrapper .desktop_menu .row ul li {
   text-align: right;
-  width: fit-content;
+  width: intrinsic;
+  /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;
+  /* Firefox/Gecko */
+  width: -webkit-max-content;
 }
 .menu_wrapper .desktop_menu .row ul a {
   color: #222222;
@@ -112,7 +116,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 .menu_wrapper .desktop_menu .row ul a:hover {
   text-decoration: none;
-  color: #ffa704;
+  color: #0097da;
 }
 .menu_wrapper .desktop_menu .row .icons img {
   width: 20%;
@@ -120,7 +124,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 .menu_wrapper .desktop_menu .row input {
   color: white;
-  background: #ffa704;
+  background: #0097da;
   border: none;
   padding: 0;
   max-height: 0;
@@ -211,7 +215,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
   }
 }
 .menu_wrapper .mobile_menu_list ul li a:hover {
-  color: #ffa704;
+  color: #0097da;
 }
 
 .banner_wrapper {
@@ -239,7 +243,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
   padding: 0;
 }
 .banner_wrapper .row button {
-  background-color: #ffa704;
+  background-color: #0097da;
   color: white;
   width: 200px;
   height: 70px;
@@ -261,10 +265,12 @@ ul, li, p, h1, h2, h3, h4, h5 {
   width: 50%;
 }
 
+.supplier, .clients {
+  position: relative;
+}
 .supplier .row, .clients .row {
   flex-wrap: nowrap;
   margin: 0;
-  position: relative;
   overflow: hidden;
 }
 .supplier .row .inner-items, .clients .row .inner-items {
@@ -276,9 +282,9 @@ ul, li, p, h1, h2, h3, h4, h5 {
   border-radius: 5px;
   width: 80%;
 }
-.supplier .row .swiper-button-next, .supplier .row .swiper-button-prev, .clients .row .swiper-button-next, .clients .row .swiper-button-prev {
+.supplier .swiper-button-next, .supplier .swiper-button-prev, .clients .swiper-button-next, .clients .swiper-button-prev {
   bottom: auto;
-  top: -45px;
+  top: 40px;
   color: black;
   font-weight: 700;
   text-decoration: none;
@@ -287,33 +293,36 @@ ul, li, p, h1, h2, h3, h4, h5 {
   z-index: 100;
   opacity: 1;
 }
-.supplier .row .swiper-button-next:hover, .supplier .row .swiper-button-prev:hover, .clients .row .swiper-button-next:hover, .clients .row .swiper-button-prev:hover {
-  color: #ffa704;
+.supplier .swiper-button-next:focus, .supplier .swiper-button-prev:focus, .clients .swiper-button-next:focus, .clients .swiper-button-prev:focus {
+  outline: transparent;
 }
-.supplier .row .swiper-button-next::after, .supplier .row .swiper-button-prev::after, .clients .row .swiper-button-next::after, .clients .row .swiper-button-prev::after {
+.supplier .swiper-button-next:hover, .supplier .swiper-button-prev:hover, .clients .swiper-button-next:hover, .clients .swiper-button-prev:hover {
+  color: #0097da;
+}
+.supplier .swiper-button-next::after, .supplier .swiper-button-prev::after, .clients .swiper-button-next::after, .clients .swiper-button-prev::after {
   display: none;
 }
-.supplier .row .swiper-button-next, .clients .row .swiper-button-next {
-  right: 1%;
+.supplier .swiper-button-next, .clients .swiper-button-next {
+  right: 10%;
 }
-.supplier .row .swiper-button-prev, .clients .row .swiper-button-prev {
-  right: 6%;
+.supplier .swiper-button-prev, .clients .swiper-button-prev {
+  right: 15%;
   left: auto;
   padding-right: 2%;
   border-right: 2px solid #272727;
 }
 @media (max-width: 1020px) {
-  .supplier .row .swiper-button-prev, .clients .row .swiper-button-prev {
+  .supplier .swiper-button-prev, .clients .swiper-button-prev {
     right: 11%;
   }
 }
 @media (max-width: 768px) {
-  .supplier .row .swiper-button-prev, .clients .row .swiper-button-prev {
+  .supplier .swiper-button-prev, .clients .swiper-button-prev {
     right: 13%;
   }
 }
 @media (max-width: 600px) {
-  .supplier .row .swiper-button-prev, .clients .row .swiper-button-prev {
+  .supplier .swiper-button-prev, .clients .swiper-button-prev {
     right: 18%;
   }
 }
@@ -349,7 +358,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
   background-image: url("../images/icons/mobile.svg");
 }
 .contact .tel:hover {
-  color: #ffa704;
+  color: #0097da;
 }
 
 footer .tel, footer .email {
@@ -361,7 +370,7 @@ footer .tel, footer .email {
   text-decoration: none;
 }
 footer .tel:hover, footer .email:hover {
-  color: #ffa704;
+  color: #0097da;
 }
 footer .tel {
   background-image: url("../images/icons/mobile.svg");
@@ -380,7 +389,7 @@ footer input {
   }
 }
 footer .btn {
-  background-color: #ffa704;
+  background-color: #0097da;
   color: white;
   margin-left: -6px;
   margin-top: -2px;

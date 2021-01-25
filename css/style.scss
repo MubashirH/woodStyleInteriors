@@ -71,7 +71,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
     @include screen768() { width: 60%; }
     @include screen600() { width: 70%; }
     .btn { 
-        background-color: #ffa704; color: white; 
+        background-color: #0097da; color: white; 
         &:hover {
             background-color: white; color: black; border: 1px solid;
         }
@@ -114,7 +114,12 @@ ul, li, p, h1, h2, h3, h4, h5 {
             justify-content: space-around;
             ul {
                 list-style-type: none;
-                li { text-align: right; width: fit-content;}
+                li { 
+                    text-align: right;
+                    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+                    width: -moz-max-content;    /* Firefox/Gecko */
+                    width: -webkit-max-content
+                 }
                 a {
                     color: rgb(34, 34, 34);
                     text-decoration: none;
@@ -122,7 +127,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
                     cursor: pointer;
                     &:hover{
                         text-decoration: none;
-                        color: #ffa704;
+                        color: #0097da;
                     }
                 }
             }
@@ -134,7 +139,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
             }
             input {
                 color: white;
-                background: #ffa704;
+                background: #0097da;
                 border: none;
                 padding: 0;
                 max-height: 0;
@@ -196,7 +201,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
                     color: black;
                     @include screen600() { font-size: 30px;}
                     &:hover {
-                        color: #ffa704;
+                        color: #0097da;
                     }
                 }
             }
@@ -217,7 +222,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
         h1 {font-size: 50px; font-weight: 700;}
         h1,p {color: white; padding: 0;}
         button {
-            background-color: rgb(255, 167, 4) ;
+            background-color: #0097da ;
             color: white;
             width: 200px;
             height: 70px;
@@ -244,10 +249,10 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 
 .supplier, .clients {
+    position: relative;
     .row {
         flex-wrap: nowrap;
         margin: 0;
-        position: relative;
         overflow: hidden;
         .inner-items {
             display: flex;
@@ -258,29 +263,30 @@ ul, li, p, h1, h2, h3, h4, h5 {
                 width: 80%;
             }
         }
-        .swiper-button-next, .swiper-button-prev {
-            bottom: auto;
-            top: -45px;
-            color: black;
-            font-weight: 700;
-            text-decoration: none;
-            margin: 0;
-            width: auto;
-            z-index: 100;
-            opacity: 1;
-            &:hover {
-                color: #ffa704;
-            }
-            &::after { display: none;}
+    }
+    .swiper-button-next, .swiper-button-prev {
+        bottom: auto;
+        top: 40px;
+        color: black;
+        font-weight: 700;
+        text-decoration: none;
+        margin: 0;
+        width: auto;
+        z-index: 100;
+        opacity: 1;
+        &:focus { outline: transparent; }
+        &:hover {
+            color: #0097da;
         }
-        .swiper-button-next { right: 1%; }
-        .swiper-button-prev { 
-            right: 6%; left: auto; padding-right: 2%; border-right: 2px solid rgb(39, 39, 39);
-            @include screen1020() { right: 11%; }
-            @include screen768() { right: 13%; }
-            @include screen600() { right: 18%; }
-    
-        }
+        &::after { display: none;}
+    }
+    .swiper-button-next { right: 10%; }
+    .swiper-button-prev { 
+        right: 15%; left: auto; padding-right: 2%; border-right: 2px solid rgb(39, 39, 39);
+        @include screen1020() { right: 11%; }
+        @include screen768() { right: 13%; }
+        @include screen600() { right: 18%; }
+
     }
 }
 
@@ -314,7 +320,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
         color: black;
         text-decoration: none;
         background-image: url('../images/icons/mobile.svg');
-        &:hover { color: #ffa704;}
+        &:hover { color: #0097da;}
     }
 }
 
@@ -327,7 +333,7 @@ footer {
         padding-left: 25px;
         color: black;
         text-decoration: none;
-        &:hover { color: #ffa704;}
+        &:hover { color: #0097da;}
     }
     .tel { background-image: url('../images/icons/mobile.svg');}
     .email { background-image: url('../images/icons/mail.svg');}
@@ -340,7 +346,7 @@ footer {
         }
     }
     .btn {
-        background-color: #ffa704;
+        background-color: #0097da;
         color: white;
         margin-left: -6px;
         margin-top: -2px;

@@ -5,7 +5,7 @@ var supplierSwiper = new Swiper('.supplier-container', {
         prevEl: '.swiper-button-prev',
       },
     breakpoints: {
-        1199: { slidesPerView: 5 },
+        1199: { slidesPerView: 6 },
         768: { slidesPerView: 3 },
         480: { slidesPerView: 2 },
         400: { slidesPerView: 1 },
