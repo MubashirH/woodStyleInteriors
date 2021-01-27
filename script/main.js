@@ -18,10 +18,10 @@ var clientSwiper = new Swiper('.client-container', {
         prevEl: '.swiper-button-prev',
       },
     breakpoints: {
-        1199: { slidesPerView: 4 },
-        768: { slidesPerView: 3 },
-        480: { slidesPerView: 2 },
-        400: { slidesPerView: 1 },
+        1199: { slidesPerView: 5 },
+        768: { slidesPerView: 4 },
+        480: { slidesPerView: 3 },
+        400: { slidesPerView: 2 },
     }
 })
 
@@ -58,10 +58,8 @@ $(document).ready( function () {
             $('.menu_wrapper').css('transform' ,'translateY(00px)')
         }
         if ( window.pageYOffset >=  ($('.banner_wrapper').height()-100)) {
-            $('.menu_wrapper').css('backgroundColor','white')
             $('#loginModal').hide()
         } else {
-            $('.menu_wrapper').css('backgroundColor','transparent')
             $('#loginModal').show()
         }
     });

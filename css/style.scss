@@ -53,7 +53,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
     width: 30%;
     position: fixed;
     right: 3%;
-    top : 6%;
+    top : 3%;
     z-index: 1000;
     background: white;
     border: 1px solid #ccc;
@@ -90,7 +90,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 
 .menu_wrapper {
-    background: none;
+    background: white;
     position: fixed;
     top: 0;
     width: 100%;
@@ -215,6 +215,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 100px;
     .row {
         height: 85vh;
         align-content: center;
@@ -239,6 +240,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 
 .services {
+    margin-bottom: 100px;
     .item {
         text-align: center;
         margin-top: 30px;
@@ -250,10 +252,12 @@ ul, li, p, h1, h2, h3, h4, h5 {
 
 .supplier, .clients {
     position: relative;
+    margin-bottom: 100px;
+    // .container {
+    //     overflow: hidden;}
     .row {
         flex-wrap: nowrap;
         margin: 0;
-        overflow: hidden;
         .inner-items {
             display: flex;
             align-items: center;
@@ -289,8 +293,15 @@ ul, li, p, h1, h2, h3, h4, h5 {
 
     }
 }
+.clients {
+    .inner-items {
+        flex-direction: column;
+        .item { text-align: center;}
+    }
+}
 
 .slogan_wrapper {
+    margin-bottom: 100px;
     min-height: 350px;
     padding-right: 10%;
     background-image: url('../images/slogan.jpg');
@@ -302,6 +313,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 
 .contact {
+    margin-bottom: 100px;
     .map {
         margin-top: 30px;
         min-height: 400px;
