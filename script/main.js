@@ -86,10 +86,11 @@ $(document).ready( function () {
         $('.body_wrapper').css({'filter':'blur(0px)','overflow':'auto','height':'fit-content'})
     })
 
-    
+
     mobileMenuTransition()
 })
 
 function contactClick() {
     $('#loginModal').css({'display':'block','opacity':'1'})
 }
+

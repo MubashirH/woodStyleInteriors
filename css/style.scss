@@ -73,7 +73,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
     .btn { 
         background-color: #0097da; color: white; 
         &:hover {
-            background-color: white; color: black; border: 1px solid;
+            background-color: white; color: black; border: 1px solid #ccc;
         }
     }
     .modal_close {
@@ -334,6 +334,16 @@ ul, li, p, h1, h2, h3, h4, h5 {
         background-image: url('../images/icons/mobile.svg');
         &:hover { color: #0097da;}
     }
+    button {
+        background-color: #0097da;
+        color: white;
+        border: none;
+        &:hover {
+            background-color: white;
+            border: 1px solid #ccc;
+            color: black;
+        }
+    }
 }
 
 
@@ -378,9 +388,54 @@ footer {
 }
 
 .gallery_wrapper {
-    margin-top: 200px;
+    margin-top: 150px;
     @include screen768() {
         margin-top: 70px;
     }
+    .tab-pane {
+        .column {
+            flex: 33.2%;
+            img { 
+                width: 100%; 
+                margin-top: 5%;
+                filter: grayscale(1);
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+            &:nth-child(1), &:nth-child(2) {
+                margin-right: 0.1%;
+            }
+            @include screen768() {
+                flex: 47%;
+                &:nth-child(1){
+                    margin-right: 6%;
+                } 
+                &:nth-child(2) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 
+}
+
+.gallery_modal {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    display: none;
+    height: 100vh;
+    background-color: rgb(31 31 31 / 91%);
+    z-index: 1000;
+    img {
+        height: 80%;    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

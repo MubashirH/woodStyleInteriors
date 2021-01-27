@@ -53,7 +53,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
 #loginModal .btn:hover {
   background-color: white;
   color: black;
-  border: 1px solid;
+  border: 1px solid #ccc;
 }
 #loginModal .modal_close {
   cursor: pointer;
@@ -375,6 +375,16 @@ ul, li, p, h1, h2, h3, h4, h5 {
 .contact .tel:hover {
   color: #0097da;
 }
+.contact button {
+  background-color: #0097da;
+  color: white;
+  border: none;
+}
+.contact button:hover {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: black;
+}
 
 footer .tel, footer .email {
   background-position: left;
@@ -425,12 +435,57 @@ footer .btn:hover {
 }
 
 .gallery_wrapper {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 @media (max-width: 768px) {
   .gallery_wrapper {
     margin-top: 70px;
   }
+}
+.gallery_wrapper .tab-pane .column {
+  flex: 33.2%;
+}
+.gallery_wrapper .tab-pane .column img {
+  width: 100%;
+  margin-top: 5%;
+  filter: grayscale(1);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.gallery_wrapper .tab-pane .column img:hover {
+  filter: grayscale(0);
+}
+.gallery_wrapper .tab-pane .column:nth-child(1), .gallery_wrapper .tab-pane .column:nth-child(2) {
+  margin-right: 0.1%;
+}
+@media (max-width: 768px) {
+  .gallery_wrapper .tab-pane .column {
+    flex: 47%;
+  }
+  .gallery_wrapper .tab-pane .column:nth-child(1) {
+    margin-right: 6%;
+  }
+  .gallery_wrapper .tab-pane .column:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
+.gallery_modal {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  display: none;
+  height: 100vh;
+  background-color: rgba(31, 31, 31, 0.91);
+  z-index: 1000;
+}
+.gallery_modal img {
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */
