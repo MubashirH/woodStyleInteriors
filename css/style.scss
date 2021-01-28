@@ -293,6 +293,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
 
     }
 }
+
 .clients {
     .inner-items {
         flex-direction: column;
@@ -302,10 +303,10 @@ ul, li, p, h1, h2, h3, h4, h5 {
 
 .slogan_wrapper {
     margin-bottom: 100px;
-    min-height: 350px;
+    min-height: 450px;
     padding-right: 10%;
     background-image: url('../images/slogan.jpg');
-    background-position: center;
+    background-position: bottom;
     background-size: cover;    
     display: flex;
     flex-direction: column;
@@ -388,33 +389,45 @@ footer {
 }
 
 .gallery_wrapper {
-    margin-top: 150px;
+    margin-bottom: 100px;
     @include screen768() {
         margin-top: 70px;
     }
-    .tab-pane {
-        .column {
-            flex: 33.2%;
-            img { 
-                width: 100%; 
-                margin-top: 5%;
-                filter: grayscale(1);
-                cursor: pointer;
-                transition: all 200ms ease-in-out;
-                &:hover {
-                    filter: grayscale(0);
+    .nav-item {
+        a {
+            color: black;
+            &:hover {
+                color: #0097da;
+            }
+        }
+    }
+    .tab-content {
+        max-height: 600px;
+        overflow: auto;
+        .tab-pane {
+            .column {
+                flex: 33.2%;
+                img { 
+                    width: 100%; 
+                    margin-top: 5%;
+                    filter: grayscale(1);
+                    cursor: pointer;
+                    transition: all 200ms ease-in-out;
+                    &:hover {
+                        filter: grayscale(0);
+                    }
                 }
-            }
-            &:nth-child(1), &:nth-child(2) {
-                margin-right: 0.1%;
-            }
-            @include screen768() {
-                flex: 47%;
-                &:nth-child(1){
-                    margin-right: 6%;
-                } 
-                &:nth-child(2) {
-                    margin-right: 0;
+                &:nth-child(1), &:nth-child(2) {
+                    margin-right: 0.1%;
+                }
+                @include screen768() {
+                    flex: 47%;
+                    &:nth-child(1){
+                        margin-right: 6%;
+                    } 
+                    &:nth-child(2) {
+                        margin-right: 0;
+                    }
                 }
             }
         }

@@ -21,7 +21,7 @@
             <div class="modal_close"></div>
 
             <div class="form">
-                <form>
+                <form action="" method="post">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name">
@@ -51,6 +51,11 @@
                   </form>
             </div>
         </div>
+
+        
+      <div class="gallery_modal" id='galleryModal'>
+            <img src="">
+        </div>
         
     <section class="menu_wrapper">
         <div class='container desktop_menu'>
@@ -64,7 +69,7 @@
                             <li ><a href='#home'>Home</a></li>
                             <li ><a href='#service'>Services</a></li>
                             <li ><a href='#supplier'>Suppliers</a></li>
-                            <li ><a href='./gallery.html'>Gallery</a></li>
+                            <li ><a href='#gallery'>Gallery</a></li>
                             <li ><a href='#client'>Clients</a></li>
                             <li ><a href='#about'>About</a></li>
                             <li ><a href='#contact'>Contact</a></li>
@@ -89,7 +94,7 @@
                 <li ><a href='#home'>Home</a></li>
                 <li ><a href='#service'>Services</a></li>
                 <li ><a href='#supplier'>Suppliers</a></li>
-                <li ><a href='./gallery.html'>Gallery</a></li>
+                <li ><a href='#gallery'>Gallery</a></li>
                 <li ><a href='#client'>Clients</a></li>
                 <li ><a href='#about'>About</a></li>
                 <li ><a href="#contact">Contact</a></li>
@@ -282,6 +287,97 @@
                     </div>
                     <div class="swiper-button-next">Next</div>
                     <div class="swiper-button-prev">Previous</div>
+                </div>
+            </div>
+        </div>
+
+        
+      <div id='gallery' class="gallery_wrapper mt-5">
+        <div class="container">
+            <h1 class="text-center">Gallery</h1>
+            <div class="row mt-4">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#wardrobe" role="tab" aria-controls="home" aria-selected="true">Wardrobe</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#storage" role="tab" aria-controls="profile" aria-selected="false">Storage</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#kitchen" role="tab" aria-controls="contact" aria-selected="false">Kitchen</a>
+                  </li>
+               </ul>
+                  <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="wardrobe" role="tabpanel" aria-labelledby="wardrobe-tab">
+                          <div class="row">
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/Aristo 2-page-001.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/cadenza rivision bed room grey colour with golden profile 3.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/cbr v 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/cbr ward robe .jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/cbr warrd robe rivision 1.jpg' >
+                              </div>
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/first floor bed room view 2.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/g bed room view 2.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/g bedroom view 20.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/manoj cbr bed room view 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/manoj mbr view 1.jpg' >
+                              </div>
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/mbr bed room view 2.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/sandeep sir bed room 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/sandeep sir bed room 3.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/shoba bbr bed room view 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/shoba gbr view 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/wardrobes/shoba mbr ward robe view 1.jpg' >
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tab-pane fade" id="storage" role="tabpanel" aria-labelledby="storage-tab">
+                          <div class="row">
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/storage/20210104_204812-01.jpeg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/20210104_204812-01.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/69e34ee600f531b9fc0e0e051e072725.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/d3 003 living room view 2.jpg' >
+                              </div>
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/storage/Enscape_2021-01-04-20-43-00_Scene 9-01.jpeg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/Enscape_2021-01-04-20-44-38_Scene 10-01.jpeg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/living room tv unit view 2.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/praveen kumar tv unit.jpg' >
+                              </div>
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/storage/saipurna master bed room 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/tv unit r 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/sai purna cbr 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/storage/d3 003 mbr view 3.jpg' >
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tab-pane fade" id="kitchen" role="tabpanel" aria-labelledby="kitchen-tab">
+                          <div class="row">
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/kitchen/a4aaf011-7bb1-484e-b35f-e01fccd5230a.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/kitchen/Enscape_2021-01-04-20-36-55_Scene 4-01.jpeg' >
+                                  <img class="gallery_img" src='./images/gallery/kitchen/kitchen 1.jpg' >
+                              </div>
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/kitchen/kitchen 2.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/kitchen/kitchen view 1.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/kitchen/kitchen view 2.jpg' >
+                              </div>
+                              <div class="column">
+                                  <img class="gallery_img" src='./images/gallery/kitchen/kitchen view r.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/kitchen/sandeep kitchen change view 2.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/kitchen/sandeep sir kitchen view 3.jpg' >
+                                  <img class="gallery_img" src='./images/gallery/kitchen/shoba kitchen view 1.jpg' >
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
                 </div>
             </div>
         </div>

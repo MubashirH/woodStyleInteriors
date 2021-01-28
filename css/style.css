@@ -340,10 +340,10 @@ ul, li, p, h1, h2, h3, h4, h5 {
 
 .slogan_wrapper {
   margin-bottom: 100px;
-  min-height: 350px;
+  min-height: 450px;
   padding-right: 10%;
   background-image: url("../images/slogan.jpg");
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -435,37 +435,47 @@ footer .btn:hover {
 }
 
 .gallery_wrapper {
-  margin-top: 150px;
+  margin-bottom: 100px;
 }
 @media (max-width: 768px) {
   .gallery_wrapper {
     margin-top: 70px;
   }
 }
-.gallery_wrapper .tab-pane .column {
+.gallery_wrapper .nav-item a {
+  color: black;
+}
+.gallery_wrapper .nav-item a:hover {
+  color: #0097da;
+}
+.gallery_wrapper .tab-content {
+  max-height: 600px;
+  overflow: auto;
+}
+.gallery_wrapper .tab-content .tab-pane .column {
   flex: 33.2%;
 }
-.gallery_wrapper .tab-pane .column img {
+.gallery_wrapper .tab-content .tab-pane .column img {
   width: 100%;
   margin-top: 5%;
   filter: grayscale(1);
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
-.gallery_wrapper .tab-pane .column img:hover {
+.gallery_wrapper .tab-content .tab-pane .column img:hover {
   filter: grayscale(0);
 }
-.gallery_wrapper .tab-pane .column:nth-child(1), .gallery_wrapper .tab-pane .column:nth-child(2) {
+.gallery_wrapper .tab-content .tab-pane .column:nth-child(1), .gallery_wrapper .tab-content .tab-pane .column:nth-child(2) {
   margin-right: 0.1%;
 }
 @media (max-width: 768px) {
-  .gallery_wrapper .tab-pane .column {
+  .gallery_wrapper .tab-content .tab-pane .column {
     flex: 47%;
   }
-  .gallery_wrapper .tab-pane .column:nth-child(1) {
+  .gallery_wrapper .tab-content .tab-pane .column:nth-child(1) {
     margin-right: 6%;
   }
-  .gallery_wrapper .tab-pane .column:nth-child(2) {
+  .gallery_wrapper .tab-content .tab-pane .column:nth-child(2) {
     margin-right: 0;
   }
 }

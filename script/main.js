@@ -86,11 +86,56 @@ $(document).ready( function () {
         $('.body_wrapper').css({'filter':'blur(0px)','overflow':'auto','height':'fit-content'})
     })
 
-
+    galleryPop()
     mobileMenuTransition()
 })
 
 function contactClick() {
     $('#loginModal').css({'display':'block','opacity':'1'})
+}
+
+function galleryPop() {
+    $('.gallery_img').click(function(e) {
+        e.stopPropagation()
+        console.log('clicked')
+        $('.gallery_modal').css('display','block')
+        const img_src = $(this).attr('src')
+        $('.gallery_modal img').attr('src',img_src)
+        $('.gallery_wrapper').css('filter','blur(10px)')
+    })
+
+    $('html').click(function(e) {
+        if (e.target.id === 'galleryModal') {
+            $('.gallery_modal').css('display','none')
+        $('.gallery_wrapper').css('filter','blur(0px)')
+        }
+    })
+}
+
+function formSubmittion() {
+    $('.form').on('submit', function (e) {
+        console.log('submitting')
+        e.preventDefault();
+          
+          
+        $('.form .btn').val('Sending...');
+        $.ajax({
+          type: 'post',
+          url: 'contact.php',
+          data: $('.form').serialize(),
+          success: function () {
+              $('#result').html('Your request has been submitted');
+              $('.form .btn').val('Submit');
+              setTimeout( function() { $('#result').html('')}, 1000);
+              $('.form').trigger('reset');
+          },
+          error: function() {
+              $('.form .btn').val('Submit');
+              $('#result').html('We are facing some problem please try again later!!');
+              setTimeout( function() { $('#result').html('')}, 1000)
+          }
+        });
+
+      });
 }
 
