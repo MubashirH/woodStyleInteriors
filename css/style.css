@@ -43,12 +43,28 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 @media (max-width: 600px) {
   #loginModal {
-    width: 70%;
+    width: 90%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+#loginModal label {
+  margin-top: 30px;
+}
+@media (max-width: 600px) {
+  #loginModal label {
+    margin-top: 10px;
   }
 }
 #loginModal .btn {
+  margin-top: 30px;
   background-color: #0097da;
   color: white;
+}
+@media (max-width: 600px) {
+  #loginModal .btn {
+    margin-top: 10px;
+  }
 }
 #loginModal .btn:hover {
   background-color: white;
@@ -65,6 +81,12 @@ ul, li, p, h1, h2, h3, h4, h5 {
   background-image: url("../images/icons/cancel.svg");
   background-size: contain;
   background-position: center;
+}
+@media (max-width: 600px) {
+  #loginModal .modal_close {
+    right: 10px;
+    top: 10px;
+  }
 }
 
 .menu_wrapper {
@@ -268,6 +290,11 @@ ul, li, p, h1, h2, h3, h4, h5 {
 .services .item img {
   width: 50%;
 }
+@media (max-width: 480px) {
+  .services .item img {
+    width: 70%;
+  }
+}
 
 .supplier, .clients {
   position: relative;
@@ -306,8 +333,18 @@ ul, li, p, h1, h2, h3, h4, h5 {
 .supplier .swiper-button-next::after, .supplier .swiper-button-prev::after, .clients .swiper-button-next::after, .clients .swiper-button-prev::after {
   display: none;
 }
+@media (max-width: 600px) {
+  .supplier .swiper-button-next, .supplier .swiper-button-prev, .clients .swiper-button-next, .clients .swiper-button-prev {
+    font-size: 12px;
+  }
+}
 .supplier .swiper-button-next, .clients .swiper-button-next {
   right: 10%;
+}
+@media (max-width: 768px) {
+  .supplier .swiper-button-next, .clients .swiper-button-next {
+    right: 6%;
+  }
 }
 .supplier .swiper-button-prev, .clients .swiper-button-prev {
   right: 15%;
@@ -327,7 +364,13 @@ ul, li, p, h1, h2, h3, h4, h5 {
 }
 @media (max-width: 600px) {
   .supplier .swiper-button-prev, .clients .swiper-button-prev {
-    right: 18%;
+    right: 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .supplier .swiper-container {
+    margin-top: 20px;
   }
 }
 
@@ -348,6 +391,11 @@ ul, li, p, h1, h2, h3, h4, h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .slogan_wrapper {
+    min-height: 350px;
+  }
 }
 
 .contact {
@@ -379,11 +427,17 @@ ul, li, p, h1, h2, h3, h4, h5 {
   background-color: #0097da;
   color: white;
   border: none;
+  margin-top: 30px;
 }
 .contact button:hover {
   background-color: white;
   border: 1px solid #ccc;
   color: black;
+}
+@media (max-width: 600px) {
+  .contact button {
+    margin-top: 20px;
+  }
 }
 
 footer .tel, footer .email {
@@ -408,7 +462,7 @@ footer input {
   border: none;
   width: 75%;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   footer input {
     width: 100% !important;
   }
@@ -421,12 +475,13 @@ footer .btn {
   border-radius: 0;
   width: 25%;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   footer .btn {
     display: block;
     margin-left: 0;
     margin-top: 10px;
     width: fit-content;
+    width: -moz-max-content;
   }
 }
 footer .btn:hover {
@@ -452,6 +507,11 @@ footer .btn:hover {
   max-height: 600px;
   overflow: auto;
 }
+@media (max-width: 768px) {
+  .gallery_wrapper .tab-content .tab-pane {
+    padding: 0 10px;
+  }
+}
 .gallery_wrapper .tab-content .tab-pane .column {
   flex: 33.2%;
 }
@@ -471,12 +531,26 @@ footer .btn:hover {
 @media (max-width: 768px) {
   .gallery_wrapper .tab-content .tab-pane .column {
     flex: 47%;
+    padding: 0 5px;
   }
   .gallery_wrapper .tab-content .tab-pane .column:nth-child(1) {
-    margin-right: 6%;
+    margin-right: 0%;
   }
   .gallery_wrapper .tab-content .tab-pane .column:nth-child(2) {
     margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .gallery_wrapper .desktop-gallery {
+    display: none;
+  }
+}
+.gallery_wrapper .mobile-gallery {
+  display: none;
+}
+@media (max-width: 768px) {
+  .gallery_wrapper .mobile-gallery {
+    display: block;
   }
 }
 
@@ -496,6 +570,12 @@ footer .btn:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .gallery_modal img {
+    height: auto;
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

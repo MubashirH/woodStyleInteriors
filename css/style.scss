@@ -69,8 +69,18 @@ ul, li, p, h1, h2, h3, h4, h5 {
         background-size: 15px;
      }
     @include screen768() { width: 60%; }
-    @include screen600() { width: 70%; }
+    @include screen600() { 
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    label { 
+        margin-top: 30px;
+        @include screen600() { margin-top: 10px;}
+    }
     .btn { 
+        margin-top: 30px;
+        @include screen600() { margin-top: 10px;}
         background-color: #0097da; color: white; 
         &:hover {
             background-color: white; color: black; border: 1px solid #ccc;
@@ -86,6 +96,10 @@ ul, li, p, h1, h2, h3, h4, h5 {
         background-image: url('../images/icons/cancel.svg');
         background-size: contain;
         background-position: center;
+        @include screen600() {
+            right: 10px;
+            top: 10px;
+        }
     }
 }
 
@@ -246,6 +260,9 @@ ul, li, p, h1, h2, h3, h4, h5 {
         margin-top: 30px;
         img {
             width: 50%;
+            @include screen480() {
+                width: 70%;
+            }
         }
     }
 }
@@ -283,14 +300,28 @@ ul, li, p, h1, h2, h3, h4, h5 {
             color: #0097da;
         }
         &::after { display: none;}
+        @include screen600() { font-size: 12px;}
     }
-    .swiper-button-next { right: 10%; }
+    .swiper-button-next {
+        right: 10%; 
+        @include screen768() {
+            right: 6%;
+        }
+    }
     .swiper-button-prev { 
         right: 15%; left: auto; padding-right: 2%; border-right: 2px solid rgb(39, 39, 39);
         @include screen1020() { right: 11%; }
         @include screen768() { right: 13%; }
-        @include screen600() { right: 18%; }
+        @include screen600() { right: 15%; }
 
+    }
+}
+
+.supplier {
+    .swiper-container {
+        @include screen600() {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -311,6 +342,9 @@ ul, li, p, h1, h2, h3, h4, h5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include screen768() {
+        min-height: 350px;
+    }
 }
 
 .contact {
@@ -339,10 +373,14 @@ ul, li, p, h1, h2, h3, h4, h5 {
         background-color: #0097da;
         color: white;
         border: none;
+        margin-top: 30px;
         &:hover {
             background-color: white;
             border: 1px solid #ccc;
             color: black;
+        }
+        @include screen600() {
+            margin-top: 20px;
         }
     }
 }
@@ -364,7 +402,7 @@ footer {
         padding: 7px 10px;
         border: none;
         width: 75%;
-        @include screen600() {
+        @include screen768() {
             width: 100% !important;
         }
     }
@@ -375,11 +413,12 @@ footer {
         margin-top: -2px;
         border-radius: 0;
         width: 25%;
-        @include screen600() {
+        @include screen768() {
             display: block;
             margin-left: 0;
             margin-top: 10px;
             width: fit-content;
+            width: -moz-max-content;
         }
         &:hover {
             color: black;
@@ -405,6 +444,7 @@ footer {
         max-height: 600px;
         overflow: auto;
         .tab-pane {
+            @include screen768() { padding: 0 10px;}
             .column {
                 flex: 33.2%;
                 img { 
@@ -422,8 +462,9 @@ footer {
                 }
                 @include screen768() {
                     flex: 47%;
+                    padding: 0 5px;
                     &:nth-child(1){
-                        margin-right: 6%;
+                        margin-right: 0%;
                     } 
                     &:nth-child(2) {
                         margin-right: 0;
@@ -431,6 +472,13 @@ footer {
                 }
             }
         }
+    }
+    .desktop-gallery {
+        @include screen768() { display: none; }
+    }
+    .mobile-gallery {
+        display: none;
+        @include screen768() { display: block;}
     }
 
 }
@@ -450,5 +498,9 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include screen768() {
+            height: auto;
+            width: 80%;
+        }
     }
 }

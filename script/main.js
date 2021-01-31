@@ -6,9 +6,8 @@ var supplierSwiper = new Swiper('.supplier-container', {
       },
     breakpoints: {
         1199: { slidesPerView: 6 },
-        768: { slidesPerView: 3 },
-        480: { slidesPerView: 2 },
-        400: { slidesPerView: 1 },
+        768: { slidesPerView: 4 },
+        320: { slidesPerView: 3 },
     }
 })
 
@@ -21,7 +20,7 @@ var clientSwiper = new Swiper('.client-container', {
         1199: { slidesPerView: 5 },
         768: { slidesPerView: 4 },
         480: { slidesPerView: 3 },
-        400: { slidesPerView: 2 },
+        320: { slidesPerView: 2 },
     }
 })
 
