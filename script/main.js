@@ -30,14 +30,13 @@ function mobileMenuTransition() {
     const bodyWrapper = document.querySelector('.body_wrapper')
     let clicked = false
     humberger.addEventListener('click', function() {
-        console.log(clicked)
         if (clicked) {
             humberger.src = './images/icons/menu.svg'
             mobileMenu.style.right = '-100%'
             bodyWrapper.style.filter = 'blur(0px)'
             clicked = false
         } else {
-            humberger.src = './images/icons/cancel.svg'
+            humberger.src = './images/icons/close.svg'
             mobileMenu.style.right = '0px'
             bodyWrapper.style.filter = 'blur(3px)'
             clicked = true
@@ -50,10 +49,8 @@ $(document).ready( function () {
     window.addEventListener('scroll', function() {
         scrollValue = window.pageYOffset
         if ( window.pageYOffset > scrollValue) {
-            console.log('top')
             $('.menu_wrapper').css('transform','translateY(-100px)')
         } else {
-            console.log('bto')
             $('.menu_wrapper').css('transform' ,'translateY(00px)')
         }
         if ( window.pageYOffset >=  ($('.banner_wrapper').height()-100)) {
@@ -96,7 +93,6 @@ function contactClick() {
 function galleryPop() {
     $('.gallery_img').click(function(e) {
         e.stopPropagation()
-        console.log('clicked')
         $('.gallery_modal').css('display','block')
         const img_src = $(this).attr('src')
         $('.gallery_modal img').attr('src',img_src)
@@ -113,7 +109,6 @@ function galleryPop() {
 
 function formSubmittion() {
     $('.form').on('submit', function (e) {
-        console.log('submitting')
         e.preventDefault();
           
           
