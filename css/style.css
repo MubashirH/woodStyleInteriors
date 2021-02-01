@@ -52,6 +52,12 @@ ul, li, p, h1, h2, h3, h4, h5 {
     width: 90%;
     right: 50%;
     transform: translateX(50%);
+    padding: 18px !important;
+  }
+}
+@media (max-width: 480px) {
+  #loginModal {
+    top: 1%;
   }
 }
 #loginModal label {
