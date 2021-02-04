@@ -83,7 +83,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
     }
     @include screen480() { top: 1%; }
     label { 
-        margin-top: 30px;
+        margin-top: 15px;
         @include screen600() { margin-top: 10px;}
     }
     .btn { 

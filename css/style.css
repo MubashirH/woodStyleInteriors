@@ -61,7 +61,7 @@ ul, li, p, h1, h2, h3, h4, h5 {
   }
 }
 #loginModal label {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 @media (max-width: 600px) {
   #loginModal label {
